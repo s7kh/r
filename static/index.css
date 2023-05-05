@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p, h1,h2,h3,h4,h5,h6 {
+    font-family: 'Poor Story', cursive;
+}
+
+body{
+    background-color: #1e2124;
+    font-family: 'Roboto', sans-serif;
+
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-group,
+.card{
+    aspect-ratio: 5 / 7;
+}
+.card-group,
+.card{
+    width: 30vmin;
+    border-radius: 1vmin;
+}
+.card{
+    position: absolute;
+    background-color: rgb(114, 137, 218);
+    box-shadow: rgb(0, 0, 0) 
+        0px 3px 8px;
+}
+.card:nth-child(1){
+    transform: translateX(-5%)
+        rotate(-3deg);
+}
+.card:nth-child(2){
+    transform: translateX(-5%)
+        rotate(-8deg);
+}
+.card-group:hover > .card{
+    transition: 250ms;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+}
+.card-group[data-active="active"] > .card:nth-child(1){transform: rotate(0);}
+.card-group[data-active="active"] > .card:nth-child(2){transform: rotate(0);}
+.card-group[data-active="active"] > .card:nth-child(1){
+    transform: translateX(-150%);
+}
+.card-group[data-active="active"] > .card:nth-child(2){
+    transform: translateX(150%);
+}
+.card-group[data-active="active"] > .card:nth-child(3){
+    transform: scale(1.2);
+}
+
+/* CARD STYLE */
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+.card:nth-child(3) > img{
+    width: 50%;
+    border-radius: 100%;
+    margin-bottom: 1rem;
+}
+.card:nth-child(3) > p{
+    font-size: 2vmax;
+}
+.card:nth-child(3) > .soical-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.card:nth-child(3) > .soical-media a{text-decoration: none;}
+.card:nth-child(3) > .soical-media i{
+    background-color: #6478c1;
+    width: 32px; height: 32px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: rgb(0, 0, 0);
+    transition: 300ms;
+    margin: 3px;
+}
+.card:nth-child(3) > .soical-media i:hover{
+    transform: scale(1.1);
+}
+
+.card:nth-child(2){
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.card:nth-child(2) > h1{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.card:nth-child(2) > p{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.card:nth-child(1){
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.card:nth-child(1) .posts{
+    font-size: 32px;
+}
+.card:nth-child(1) > a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    width: 90%;
+}
+.card:nth-child(1) > a .post{
+    border: 1px solid #000000;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    transition: 300ms;
+    margin-top: 10px;
+}
+.card:nth-child(1) > a .post:hover{
+    background-color: #6478c1;
+    transform: scale(1.1);
+}
+.card:nth-child(1) > a .post .tittle{
+    font-size: 22px;
+    margin-bottom: 3px;
+}
+.card:nth-child(1) > a .post p{
+    font-size: 18px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (max-width: 1133px) {
+    .card-group,
+    .card{
+        width: 35vmin;
+    }
+    .card-group[data-active="active"] > .card:nth-child(1){transform: rotate(0);}
+    .card-group[data-active="active"] > .card:nth-child(2){transform: rotate(0);}
+    .card-group[data-active="active"] > .card:nth-child(1){
+        transform: translateX(-110%);
+    }
+    .card-group[data-active="active"] > .card:nth-child(2){
+        transform: translateX(110%);
+    }
+}
+
+@media only screen and (max-width: 747px) {
+    .card{
+        margin-bottom: 10px;
+    }
+    .card-group,
+    .card{
+        width: 75vmin;
+        position: absolute;
+    }
+    .card:nth-child(3){
+        margin-top: 10px;
+    }
+    .card-group[data-active="active"] > .card:nth-child(3){
+        transform: scale(1);
+    }
+    .card-group[data-active="active"] > .card:nth-child(1){transform: rotate(0);}
+    .card-group[data-active="active"] > .card:nth-child(2){transform: rotate(0);}
+    .card-group[data-active="active"] > .card:nth-child(1){
+        transform: translateY(218.5vmin);
+    }
+    .card-group[data-active="active"] > .card:nth-child(2){
+        transform: translateY(110vmin);
+    }
+}

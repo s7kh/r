@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+p, h1,h2,h3,h4,h5,h6, code, li {
+    font-family: 'Poor Story', 'Changa';
+}
+code{
+    background-color: rgb(165, 29, 228);
+    padding: 3px;
+}
+img{
+    /* width: 80vmin; */
+    max-width: 50vmin;
+}
+
+a.back-href{
+    text-decoration: none;
+}
+a.back-href i{
+    color: rgb(50, 47, 47);
+}
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    transform: translateX(35px)
+        translateY(20px);
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.back:hover{
+    transform: translateX(35px)
+        translateY(20px) scale(1.1);
+}
+.back p{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000000;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.post{
+    height: 70%;
+}
+.post h1{
+    font-size: 32px;
+    width: 420px;
+    margin-top: 10px;
+}
+.post h2{
+    border-bottom: 1px solid #ff0000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.post p{
+    font-size: 20px;
+    width: 500px;
+}
+.post img{
+    border-radius: 4px;
+}
+
+br{
+   display: block;
+   margin: 1px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    img{
+        min-width: 100vmin;
+    }
+}
+
+@media only screen and (max-width: 747px) {
+    body{
+        padding: 10px;
+        padding-left: 20px;
+    }
+    .post h1{
+        font-size: 30px;
+        width: 320px;
+    }
+    .post h2{
+        border-bottom: 1px solid #000;
+    }
+    .post p{
+        font-size: 16px;
+        width: 320px;
+    }
+    img{
+        min-width: 80vmin;
+    }
+    pre{
+        max-width: 90%;
+    }
+}
+
+/* @media only screen and (max-width: 1180px) {
+    img{
+        min-width: 60vmin;
+    }
+} */
